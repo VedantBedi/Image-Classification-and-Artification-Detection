@@ -2,7 +2,7 @@
 
 # Adobe Mid Prep PS - Team 84 Submission
 
-This contains the codebase for our submission to the ** Inter IIT 13.0 Adobe Mid Prep PS Competition**. The project focuses on **image classification** and **artifact detection**, leveraging advanced techniques in super-resolution, classification, and interpretability.
+This contains the codebase for our submission to the **Inter IIT 13.0 Adobe Mid Prep PS Competition**. The project focuses on **image classification** and **artifact detection**, leveraging advanced techniques in super-resolution, classification, and interpretability.
 
 ---
 
@@ -22,7 +22,7 @@ This task employs **Llama Vision 3.2 Instruct 11B** in combination with **Grad-C
 
 #### **Pipeline Steps**:
 1. **Artifact Detection**: Use Grad-CAM to localize areas of interest in the classified image.
-2. **Fix Explanation**: Narrow artifact choices and provide explanations for the artifact fixes.
+2. **Explanation Generation**: Narrow artifact choices and provide explanations for the artifact fixes.
 
 ---
 
@@ -57,6 +57,7 @@ Here’s an overview of the repository:
 - **`data/`**: Contains input images for processing.
 - **`models/`**: Stores downloaded model weights and the Real-ESRGAN model.
 - **`output/`**: Contains outputs, including:
+  - The grad-cam, and super-resoluted images 
   - Results in `84_task1.json` and `84_task2.json`.
 - **`densenet.py`**: Script for classifying images using DenseNet.
 - **`super-resolution.py`**: Performs super-resolution using Real-ESRGAN.
@@ -90,10 +91,6 @@ Run the `VLM.ipynb` notebook to perform artifact detection and fix explanation.
 Results will be stored in the `output/` folder:
 - **`84_task1.json`**: Results of image classification (real or fake).
 - **`84_task2.json`**: Results of artifact detection and explanations.
-
-Additional outputs include:
-- **Super-resolved images**.
-- **Grad-CAM visualizations**.
 
 ---
 
